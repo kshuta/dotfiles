@@ -1,3 +1,4 @@
+source ~/.gitprompt.sh
 alias "comp"="gcc -Wall -Wextra -fanalyzer"
 shopt -s cdspell
 
@@ -12,11 +13,14 @@ function git_branch() {
 # Set the prompt.
 
 function bash_prompt(){
-    PS1='${debian_chroot:+($debian_chroot)}'${blu}'$(git_branch)'${pur}' \W'${grn}' \$ '${clr}
+        PS1='\[\e]0;\u@\h: \w\a\]\n${debian_chroot:+($debian_chroot)}'${blu}'$(__git_ps1 )'${pur}' \W'${grn}' \$ '${clr}
 }
 
 bash_prompt
 
 alias ls='ls --color=auto'
+
+LS_COLORS=$LS_COLORS:'di=0;35:'
+export LS_COLORS
 
 set -o vi
