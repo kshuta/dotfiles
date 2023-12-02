@@ -19,6 +19,7 @@ function bash_prompt(){
 bash_prompt
 
 alias ls='ls --color=auto'
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 LS_COLORS=$LS_COLORS:'di=0;35:'
 export LS_COLORS
