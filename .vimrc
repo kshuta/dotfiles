@@ -5,8 +5,6 @@ let mapleader = " "
 " syntax highlighting
 syntax on
 
-colorscheme PaperColor
-set background=dark
 
 " bind Ctrl-k to escape
 :imap <C-k> <Esc>
@@ -32,7 +30,7 @@ set showmatch
 autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
 autocmd Filetype go setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
 autocmd Filetype cpp setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
-autocmd Filetype c setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
+autocmd Filetype c setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
 autocmd Filetype y setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
 autocmd Filetype l setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
 autocmd Filetype rs setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
@@ -54,6 +52,7 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() }}
 Plug 'junegunn/fzf.vim'
+Plug 'NLKNguyen/papercolor-theme'
 call plug#end()
 
 let g:go_fmt_autosave = 1
@@ -94,3 +93,6 @@ nmap <space><space>x <Plug>JupyterExecute
 nmap <space><space>X <Plug>JupyterExecuteAll
 nmap <space><space>r <Plug>JupyterRestart
 
+" color scheme
+colorscheme PaperColor
+set background=dark
