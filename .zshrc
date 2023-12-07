@@ -30,7 +30,10 @@ export PATH="/usr/local/bin/:/usr/local/opt/openjdk/bin:/usr/local/protobuf/bin:
 # Go envs
 export GO_PATH="$HOME/go"
 export PATH="$PATH:/$GO_PATH/bin"
-export PATH="$(brew --prefix)/opt/make/libexec/gnubin:$PATH"
+which brew > /dev/null
+if [[ $? == 0 ]] ; then
+        export PATH="$(brew --prefix)/opt/make/libexec/gnubin:$PATH"
+fi
 
 # alias for apps
 alias brave="open -a Brave\ Browser"
