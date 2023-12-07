@@ -1,7 +1,7 @@
 source ~/.gitprompt.sh
 alias "comp"="gcc -Wall -Wextra -fanalyzer"
 shopt -s cdspell
-export $SHELL=vi
+export EDITOR=vi
 
 # Display the current Git branch in the Bash prompt.
 
