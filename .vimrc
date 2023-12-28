@@ -96,3 +96,6 @@ nmap <space><space>r <Plug>JupyterRestart
 " color scheme
 colorscheme PaperColor
 set background=dark
+
+" grep change
+set grepprg=rg\ --vimgrep\ --no-heading\ --smart-case\ --follow
