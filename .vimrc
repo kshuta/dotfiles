@@ -35,7 +35,9 @@ autocmd Filetype y setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
 autocmd Filetype l setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
 autocmd Filetype rs setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
 autocmd Filetype yaml setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
-autocmd Filetype yml setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2s
+autocmd Filetype html setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
+autocmd Filetype yaml setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
+autocmd Filetype javascript setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
 
 filetype indent plugin on
 
@@ -69,6 +71,7 @@ autocmd BufEnter *.go nmap <leader>ci  <Plug>(go-describe)
 autocmd BufEnter *.go nmap <leader>cc  <Plug>(go-callers)
 autocmd BufEnter *.go nmap <leader>gd  <Plug>(go-def)
 autocmd BufEnter *.go nmap <leader>hd  <Plug>(go-doc)
+autocmd BufEnter *.go inoremap <C-n> <C-x><C-o>
 
 autocmd BufEnter *.rs nmap <leader>od  <Plug>(go-callers)
 nmap <leader>r <Plug>(coc-references)
@@ -87,11 +90,6 @@ function! s:show_documentation()
 endfunction
 
 set hidden
-
-" jupyter settings
-nmap <space><space>x <Plug>JupyterExecute
-nmap <space><space>X <Plug>JupyterExecuteAll
-nmap <space><space>r <Plug>JupyterRestart
 
 " color scheme
 colorscheme PaperColor
